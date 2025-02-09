@@ -1,6 +1,9 @@
 ---
 layout: main.liquid
+permalink: /
 ---
+{% import 'card.njk' as card %}
+
 <header class="bg-dark py-5">
     <div class="container px-5">
         <div class="row gx-5 justify-content-center">
@@ -23,103 +26,52 @@ layout: main.liquid
 <section class="py-5 border-bottom" id="features">
     <div class="container px-5 my-5">
         <h2>Why Formal Verification?</h2>
-        <div class="card mb-3">
-            <div class="row no-gutters">
-                <div class="col-md-2">
-                    <img src="https://picsum.photos/100/100" class="card-img" alt="...">
-                </div>
-                <div class="col-md-10">
-                    <div class="card-body">
-                        <h5 class="card-title">Cover every case using the power of Mathematics</h5>
-                        <p class="card-text">
-                            Don’t trust your test cases to cover all of the behaviors. Attackers thrive on the untested code and the undocumented assumptions. Consider all possible executions simultaneously to deliver the highest possible guarantees about the behavior of your software against any attacker and in any scenario.
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row no-gutters">
-               <div class="col-md-10">
-                    <div class="card-body">
-                        <h5 class="card-title">Modular, Open-World Reasoning</h5>
-                        <p class="card-text">
-                            Understand your code modularly and find the couplings that are limiting your evolution. Verify a functions or abstractions at a time and ensure that even difficult to test interfaces behavior correctly and will continue to work as the rest of the system changes.
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <img src="https://picsum.photos/100/100" class="card-img" alt="...">
-                </div>
+        {% set headline %}Cover every case using the power of Mathematics{% endset %}
+        {% set desc %}
+            Don’t trust your test cases to cover all of the behaviors.
+            Attackers thrive on the untested code and the undocumented assumptions.
+            Consider all possible executions simultaneously to deliver the highest possible guarantees about the behavior of your software against any attacker and in any scenario.
+        {% endset %}
+        {{ card.card(headline, desc) }}
 
-            </div>
-        </div>
+        {% set headline %}Modular, Open-World Reasoning{% endset %}
+        {% set desc %}
+            Understand your code modularly and find the couplings that are limiting your evolution.
+            Verify a functions or abstractions at a time and ensure that even difficult to test interfaces behavior correctly and will continue to work as the rest of the system changes.
+        {% endset %}
+        {{ card.card(headline, desc, '', false) }}
     </div>
 </section>
 
 <section class="py-5 border-bottom" id="features">
     <div class="container px-5 my-5">
         <h2>Why BlueRock?</h2>
-        <div class="card mb-3">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="https://picsum.photos/100/100" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Support for Modern C++</h5>
-                        <p class="card-text">
-                            BlueRock tools support many features of modern C++ giving you the ability verify modern code and use modern libraries. Express your reasoning using the full power of separation logic and avoid the need to rewrite the code to work around limitations of your language or your static analysis tools.
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row no-gutters">
-               <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Focus on what's important to you</h5>
-                        <p class="card-text">
-                            Focus your verification effort and budget on verifying the most crucial parts of your system first, even if they are deeply embedded in other pieces. Verify code against specifications of its dependencies and share your library specifications to gain confidence.
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <img src="https://picsum.photos/100/100" class="card-img" alt="...">
-                </div>
+        {% set headline %}Support for Modern C++{% endset %}
+        {% set desc %}
+            BlueRock tools support many features of modern C++ giving you the ability verify modern code and use modern libraries. Express your reasoning using the full power of separation logic and avoid the need to rewrite the code to work around limitations of your language or your static analysis tools.
+        {% endset %}
+        {{ card.card(headline, desc) }}
 
-            </div>
-        </div>
-        <div class="card mb-3">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="https://picsum.photos/100/100" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Enable full system verification</h5>
-                        <p class="card-text">
-                            Real systems are more than a single application and are implemented in more than a single language. Build on language-agnostic verification techniques that can cope with these complexities and build proofs across your entire system.
-                        </p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% set headline %}Focus on what's important to <b>you</b>{% endset %}
+        {% set desc %}
+            Focus your verification effort and budget on verifying the most crucial parts of your system first, even if they are deeply embedded in other pieces. Verify code against specifications of its dependencies and share your library specifications to gain confidence.
+        {% endset %}
+        {{ card.card(headline, desc, link='', left=false) }}
+
+        {% set headline %}Enable full system verification{% endset %}
+        {% set desc %}
+            Real systems are more than a single application and are implemented in more than a single language. Build on language-agnostic verification techniques that can cope with these complexities and build proofs across your entire system.
+        {% endset %}
+        {{ card.card(headline, desc, link='', left=true) }}
     </div>
 </section>
 
 
 
 
-{% include 'tech-reports.liquid' %}
+{% include 'tech-reports.njk' %}
 
-{% comment %}
+{#
 <!-- Features section-->
 <section class="py-5 border-bottom" id="features">
     <div class="container px-5 my-5">
@@ -416,4 +368,4 @@ layout: main.liquid
         </div>
     </div>
 </section>
-{% endcomment %}
+#}
