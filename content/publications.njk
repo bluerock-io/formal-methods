@@ -1,0 +1,15 @@
+---
+layout: page.liquid
+title: Publications
+permalink: '/publications/'
+---
+{% import 'card.njk' as card %}
+
+<main>
+    <h2>Publications</h2>
+
+    {% for item in collections.tech_reports %}
+    {{ card.card(item.data.title, item.data.description, item.url) }}
+
+    {% endfor %}
+</main>
