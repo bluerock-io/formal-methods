@@ -1,0 +1,18 @@
+<section class="py-5 border-bottom" id="features">
+    <div class="container px-5 my-5">
+        <h2>Read more</h2>
+        <div class="row gx-5">
+            {% for item in collections.tech_reports limit:3 %}
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                <h2 class="h4 fw-bolder">{{ item.title }}</h2>
+                <p>{{ item.short }}</p>
+                <a class="text-decoration-none" href="{{ item.url }}">
+                    Read it!
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
