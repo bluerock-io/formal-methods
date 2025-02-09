@@ -1,7 +1,5 @@
 ---
 title: Developing with Formal Methods and BedRock Systems
-tags:
-    - tech_reports
 where: IEEE S&P
 download_link: my-download-link
 year: 2022
