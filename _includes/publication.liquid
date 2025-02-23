@@ -1,5 +1,5 @@
 ---
-layout: main.liquid
+layout: page.liquid
 ---
 
 <main style="margin: 60pt;">
@@ -10,8 +10,15 @@ layout: main.liquid
                     <div class="card-body">
                         <h5 class="card-title">{{ title }}</h5>
                         <p class="card-text">{{ content }}</p>
-                        <a href="{{ page.download_link }}" class="btn btn-primary">Download</a>
                     </div>
+                    <ul class="list-group list-group-horizontal">
+                      {% if links.download %}
+                      <li class="list-group-item"><a href="{{ links.download | url }}" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
+                      {% endif %}
+                      {% if links.publisher %}
+                      <li class="list-group-item"><a href="{{ links.publisher | url }}" class="btn btn-primary">Publisher <i class="bi bi-book"></i></a></li>
+                      {% endif %}
+                    </ul>
                 </div>
             </div>
             <div class="col-md-2 d-flex align-items-center">
