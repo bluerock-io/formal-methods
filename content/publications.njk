@@ -7,9 +7,7 @@ permalink: '/publications/'
 
 <main>
     <h2>Publications</h2>
-
     {% for item in collections.tech_reports %}
-    {{ card.card(item.data.title, item.data.description, item.url) }}
-
+    {{ card.card(item.data.title, item.data.short, item.url) }}
     {% endfor %}
 </main>
