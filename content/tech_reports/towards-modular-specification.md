@@ -2,8 +2,9 @@
 title: Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation
 where: PriSC'24
 links:
-  download: MISSING
+  download: ./towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf
   conference: https://popl24.sigplan.org/home/prisc-2024#About
+  slides: ./towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation-slides.pdf
 short: >
    An overview of our work on verifying the NOVA microkernel.
 year: 2024
