@@ -18,6 +18,9 @@ layout: page.liquid
                       {% if links.publisher %}
                       <li class="list-group-item"><a href="{{ links.publisher | url }}" class="btn btn-primary">Publisher <i class="bi bi-book"></i></a></li>
                       {% endif %}
+                      {% if links.slides %}
+                      <li class="list-group-item"><a href="{{ links.slides | url }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
+                      {% endif %}
                     </ul>
                 </div>
             </div>
