@@ -8,7 +8,17 @@ layout: page.liquid
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">{{ title }}</h5>
+                        <h3 class="card-title">{{ title }}</h3>
+                        {% if authors %}
+                        <h5 class="card-subtitle text-body-secondary">
+                          {% for auth in authors %}
+                          {{ auth }}{% if not forloop.last %}, {% endif %}
+                          {% endfor %}
+                        </h5>
+                        {% endif %}
+                        {% if date %}
+                        <p>{{ date }}</p>
+                        {% endif %}
                         <p class="card-text">{{ content }}</p>
                     </div>
                     <ul class="list-group list-group-horizontal">
