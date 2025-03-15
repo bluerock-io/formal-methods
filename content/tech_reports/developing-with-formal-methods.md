@@ -2,7 +2,7 @@
 title: Developing with Formal Methods at BedRock Systems
 where: IEEE S&P
 links:
-  download: ./developing-with-formal-methods.pdf
+  download: /tech_reports/developing-with-formal-methods.pdf
   publisher: https://ieeexplore.ieee.org/document/9760701
 short: >
     Learn how BlueRock Security is applying state-of-the-art formal verification techniques to industrial C++ code.
