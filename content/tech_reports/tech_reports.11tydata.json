@@ -1,5 +1,5 @@
 {
-    "layout": "publication.liquid",
+    "layout": "publication.njk",
     "tags": [
         "tech_reports"
     ]
