@@ -2,8 +2,7 @@
 layout: page.liquid
 ---
 
-<main style="margin: 60pt;">
-    <div class="container mt-6">
+    <div class="container mt-6" style="margin: 60pt;">
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
@@ -19,7 +18,7 @@ layout: page.liquid
                         {% if date %}
                         <p>{{ date }}</p>
                         {% endif %}
-                        <p class="card-text">{{ content }}</p>
+                        <p class="card-text">{{ content | safe }}</p>
                     </div>
                     <ul class="list-group list-group-horizontal">
                       {% if links.download %}
@@ -39,4 +38,3 @@ layout: page.liquid
             </div>
         </div>
     </div>
-</main>
