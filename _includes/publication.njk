@@ -29,6 +29,9 @@ layout: page.njk
                       {% if links.slides %}
                       <li class="list-group-item"><a href="{{ links.slides | url }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
                       {% endif %}
+                      {% if links.code %}
+                      <li class="list-group-item"><a href="{{ links.code | url }}" class="btn btn-primary">Code <i class="bi bi-code"></i></a></li>
+                      {% endif %}
                     </ul>
                 </div>
             </div>
