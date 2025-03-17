@@ -1,6 +1,6 @@
 {
     "layout": "publication.njk",
     "tags": [
-        "tech_reports"
+        "tech-report"
     ]
 }
