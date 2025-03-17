@@ -15,4 +15,4 @@ authors:
 - Yoichi Hirai
 ---
 
-The BedRock HyperVisor&trade; is a commercial, highly concurrent, verified virtualization platform that employs formal methods to enable proofs of complex, lock-free concurrent code; support automating proofs of large programs; and integrate with “informal” parts of the software lifecycle.
+The BlueRock HyperVisor is a commercial, highly concurrent, verified virtualization platform that employs formal methods to enable proofs of complex, lock-free concurrent code; support automating proofs of large programs; and integrate with “informal” parts of the software lifecycle.
