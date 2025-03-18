@@ -2,15 +2,17 @@
 {% if left %}
 <div class="card mb-3">
     <div class="row no-gutters">
+{#
         <div class="col-md-2">
             <img src="https://picsum.photos/100/100" class="card-img" alt="...">
         </div>
+#}
         <div class="col-md-10">
             <div class="card-body">
                 {% if link %}
                 <h3 class="card-title"><a href="{{ link | url }}">{{ title | safe }}</a></h3>
                 {% else %}
-                <h3 class="card-title">{{ title }}</h3>
+                <h3 class="card-title">{{ title | safe }}</h3>
                 {% endif %}
                 <p class="card-text">{{ text }}</p>
 {#                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> #}
@@ -26,16 +28,17 @@
                 {% if link %}
                 <h3 class="card-title"><a href="{{ link | url }}">{{ title | safe }}</a></h3>
                 {% else %}
-                <h3 class="card-title">{{ title }}</h3>
+                <h3 class="card-title">{{ title | safe }}</h3>
                 {% endif %}
                 <p class="card-text">{{ text }}</p>
 {#                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> #}
             </div>
         </div>
+{#
         <div class="col-md-2">
             <img src="https://picsum.photos/100/100" class="card-img" alt="...">
         </div>
-
+#}
     </div>
 </div>
 {% endif %}
