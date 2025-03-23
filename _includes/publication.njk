@@ -21,13 +21,13 @@ layout: page.njk
                     </div>
                     <ul class="list-group list-group-horizontal">
                       {% if links.download %}
-                      <li class="list-group-item"><a href="{{ links.download | url }}" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
+                      <li class="list-group-item"><a href="{{ links.download }}" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
                       {% endif %}
                       {% if links.publisher %}
-                      <li class="list-group-item"><a href="{{ links.publisher | url }}" class="btn btn-primary">Publisher <i class="bi bi-book"></i></a></li>
+                      <li class="list-group-item"><a href="{{ links.publisher }}" class="btn btn-primary">Publisher <i class="bi bi-book"></i></a></li>
                       {% endif %}
                       {% if links.slides %}
-                      <li class="list-group-item"><a href="{{ links.slides | url }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
+                      <li class="list-group-item"><a href="{{ links.slides }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
                       {% endif %}
                       {% if links.code %}
                       <li class="list-group-item"><a href="{{ links.code | url }}" class="btn btn-primary">Code <i class="bi bi-code"></i></a></li>
