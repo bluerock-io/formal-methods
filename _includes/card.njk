@@ -10,7 +10,7 @@
         <div class="col-md-10">
             <div class="card-body">
                 {% if link %}
-                <h3 class="card-title"><a href="{{ link | url }}">{{ title | safe }}</a></h3>
+                <h3 class="card-title"><a href="{{ link }}">{{ title | safe }}</a></h3>
                 {% else %}
                 <h3 class="card-title">{{ title | safe }}</h3>
                 {% endif %}
@@ -26,7 +26,7 @@
         <div class="col-md-10">
             <div class="card-body">
                 {% if link %}
-                <h3 class="card-title"><a href="{{ link | url }}">{{ title | safe }}</a></h3>
+                <h3 class="card-title"><a href="{{ link }}">{{ title | safe }}</a></h3>
                 {% else %}
                 <h3 class="card-title">{{ title | safe }}</h3>
                 {% endif %}
