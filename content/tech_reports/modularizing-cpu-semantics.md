@@ -1,6 +1,7 @@
 ---
 title: Modularizing CPU semantics for Virtualization
 where: PriSC'24
+thumbnail: /tech_reports/modularizing-cpu-semantics.png
 links:
   download: /tech_reports/modularizing-cpu-semantics.pdf
   conference: https://popl24.sigplan.org/home/prisc-2024#About

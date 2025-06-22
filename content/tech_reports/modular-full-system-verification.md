@@ -1,6 +1,7 @@
 ---
 title: Modular, Full-System Verification
 where: HotOS'25
+thumbnail: /tech_reports/modular-full-system-verification.png
 links:
   download: /tech_reports/modular-full-system-verification.pdf
   publisher: https://dl.acm.org/doi/10.1145/3713082.3730387
