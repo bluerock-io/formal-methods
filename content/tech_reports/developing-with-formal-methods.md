@@ -4,6 +4,8 @@ where: IEEE S&P
 links:
   download: /tech_reports/developing-with-formal-methods.pdf
   publisher: https://ieeexplore.ieee.org/document/9760701
+thumbnail: /tech_reports/developing-with-formal-methods.png
+
 short: >
     Learn how BlueRock Security is applying state-of-the-art formal verification techniques to industrial C++ code.
 year: 2022

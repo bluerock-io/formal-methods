@@ -35,9 +35,10 @@ layout: page.njk
                     </ul>
                 </div>
             </div>
-            {#
+            {% if thumbnail %}
             <div class="col-md-2 d-flex align-items-center">
-                <a href="{{ page.download_link }}"><img src="https://picsum.photos/200/300" alt="Card Image" class="img-fluid rounded" /></a>
-            </div> #}
+                <a href="{{ links.download }}"><img src="{{ thumbnail }}" alt="{{ title }}" class="img-fluid rounded" /></a>
+            </div>
+            {% endif %}
         </div>
     </div>
