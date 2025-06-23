@@ -6,7 +6,7 @@ links:
 thumbnail: /tech_reports/nova-interface.png
 short: >
     BlueRock Security developed a separation logic specification of the NOVA microhypervisor ABI that enables simultaneous verification of NOVA as well as verification of user-mode libraries and applications running on top of NOVA.
-year: 2024
+date: 2024-02-01
 authors:
 - Hoang-Hai Dang
 - David Swasey

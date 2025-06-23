@@ -8,7 +8,7 @@ links:
   slides: /tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation-slides.pdf
 short: >
    An overview of our work on verifying the NOVA microkernel circa 2024.
-year: 2024
+date: 2024-01-20
 authors:
 - Hoang-Hai Dang
 - David Swasey

@@ -9,7 +9,19 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("tech_reports/");
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-    eleventyConfig.addGlobalData("siteName", "BlueRock Verification");
-    eleventyConfig.addGlobalData("companyName", "BlueRock Security Inc");
+    // date filter
+    eleventyConfig.addFilter("formatDate", function(date, format) {
+        return new Date(date).toLocaleDateString(
+            'en-us',
+            {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            }
+        );
+    });
+
+    eleventyConfig.addGlobalData("siteName", "BlueRock Formal Methods");
+    eleventyConfig.addGlobalData("companyName", "BlueRock Security, Inc");
     eleventyConfig.addGlobalData("copyrightYear", function () { return new Date().getUTCFullYear(); });
 };

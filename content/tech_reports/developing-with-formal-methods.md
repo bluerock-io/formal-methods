@@ -8,7 +8,7 @@ thumbnail: /tech_reports/developing-with-formal-methods.png
 
 short: >
     Learn how BlueRock Security is applying state-of-the-art formal verification techniques to industrial C++ code.
-year: 2022
+date: 2022-06-01
 authors:
 - Gregory Malecha
 - Gordon Stewart
