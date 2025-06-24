@@ -8,6 +8,7 @@ links:
 short: >
     Learn how BlueRock is verifying entire systems using the power of separation logic.
 year: 2025
+date: 2025-05-14
 authors:
 - Gregory Malecha
 - Hoang-Hai Dang

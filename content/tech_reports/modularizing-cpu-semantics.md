@@ -7,8 +7,8 @@ links:
   conference: https://popl24.sigplan.org/home/prisc-2024#About
   slides: /tech_reports/modularizing-cpu-semantics-slides.pdf
 short: >
-   An overview of our work on hardware architectural semantics.
-year: 2024
+   An overview of our work on hardware architectural semantics to support modular reasoning principles.
+date: 2024-01-20
 authors:
 - Paolo G. Giarrusso
 - Abhishek Anand

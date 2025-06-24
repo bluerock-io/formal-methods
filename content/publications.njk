@@ -8,5 +8,28 @@ permalink: '/publications/'
 <h2>Publications</h2>
 
 {% for item in collections['tech-report'] | reverse %}
-{{ card.card(item.data.title, item.data.short, item.url) }}
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-8 align-middle">
+            <div class="card-body">
+                {% if item.url %}
+                <h3 class="card-title">
+                  <a class="text-decoration-none h3" href="{{ item.url }}">{{ item.data.title | safe }}</a>
+                </h3>
+                {% else %}
+                <h3 class="card-title">{{ item.data.title | safe }}</h3>
+                {% endif %}
+                <p class="card-text">{{ item.data.short }}</p>
+              <a class="text-decoration-none" href="{{ item.url }}">
+                Read it!<i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+        </div>
+        {% if item.data.thumbnail %}
+          <div class="col-md-4 text-center">
+            <a href="{{ item.url }}"><img src="{{ item.data.thumbnail }}" class="align-middle img-fluid rounded-end" style="max-height: 200pt" alt="{{ item.title }}"></a>
+          </div>
+        {% endif %}
+    </div>
+</div>
 {% endfor %}
