@@ -21,6 +21,15 @@ export default function (eleventyConfig) {
         );
     });
 
+    let wrap = (tag) => (data) => {
+        return "<" + tag + ">" + data.substr(2, data.length - 4) + "</" + tag + ">";
+    };
+
+    eleventyConfig.addFilter("mdToHtml", (data) => {
+        return data.replaceAll(/\*\*.+\*\*/g, wrap('b'))
+                   .replaceAll(/__.+__/g, wrap('i'));
+    });
+
     eleventyConfig.addGlobalData("siteName", "BlueRock Formal Methods");
     eleventyConfig.addGlobalData("companyName", "BlueRock Security, Inc");
     eleventyConfig.addGlobalData("copyrightYear", function () { return new Date().getUTCFullYear(); });
