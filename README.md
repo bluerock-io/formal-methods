@@ -9,5 +9,5 @@ Build Instructions
 This site is built using [11ty](https://www.11ty.dev/). You can run a local server with
 
 ```sh
-npx @11ty/eleventy --serve --watch
+npx @11ty/eleventy --serve --watch --pathprefix=formal-methods
 ```

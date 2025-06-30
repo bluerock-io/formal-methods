@@ -1,8 +1,8 @@
 <section id="features">
-  <div class="container px-5">
+  <div class="container">
 
   <h2>Read more</h2>
-  <div class="row mx-2">
+  <div class="row mx-1">
       {% for item in collections['tech-report'] | reverse | batch(4) | first %}
 
       <div class="card col-lg-6 mb-6 mb-lg-0 p-2">
@@ -35,7 +35,7 @@
 
   <div class="d-grid d-sm-flex justify-content-sm-center pt-3">
 
-    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/publications">Read More <i class="bi bi-arrow-right"></i>
+    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{{ "content/tech_reports.njk" | inputPathToUrl }}">Read More <i class="bi bi-arrow-right"></i>
  </a>
   </div>
 
