@@ -4,7 +4,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-            {% for name, url in [["Home", "/"],["Tech Reports", "/tech_reports/"]] %}
+            {% for name, url in [["Home", "/"],["FAQ","/faq/"],["Tech Reports", "/tech_reports/"]] %}
                 <li class="nav-item"><a class="nav-link{% if url == page.url %} active" aria-current="page"{% else %}"{% endif %} href="{{ url }}">{{ name }}</a></li>
             {% endfor %}
 {#
