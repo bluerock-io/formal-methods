@@ -21,13 +21,13 @@ export default function (eleventyConfig) {
         );
     });
 
-    let wrap = (tag) => (data) => {
-        return "<" + tag + ">" + data.substr(2, data.length - 4) + "</" + tag + ">";
+    let wrap = (tag, len) => (data) => {
+        return "<" + tag + ">" + data.substr(len, data.length - 2*len) + "</" + tag + ">";
     };
 
     eleventyConfig.addFilter("mdToHtml", (data) => {
-        return data.replaceAll(/\*\*.+\*\*/g, wrap('b'))
-                   .replaceAll(/__.+__/g, wrap('i'));
+        return data.replaceAll(/\*\*.+\*\*/g, wrap('b', 2))
+                   .replaceAll(/\*.+\*/g, wrap('i', 1));
     });
 
     eleventyConfig.addGlobalData("siteName", "BlueRock Formal Methods");
