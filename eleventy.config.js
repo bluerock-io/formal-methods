@@ -1,4 +1,5 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("css/styles.css");
@@ -8,6 +9,7 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("tech_reports/");
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
     // date filter
     eleventyConfig.addFilter("formatDate", function(date, format) {
