@@ -1,5 +1,6 @@
 ---
 question: Why do verification within a general purpose proof assistant?
+date: 2025-06-01
 ---
 
 Program verification is the task of connecting two worlds, your program and its specification. Many verification systems heavily optimize for the first at the expense of the second. For example, static analysis tools are excellent at proving the absence of certain kinds of undefined behavior, but are incapable of proving that a particular piece of code actually sorts a list or maintains a data structure invariant because these tools can not express the concepts of the sortedness of a list or the balancedness of a binary tree.
