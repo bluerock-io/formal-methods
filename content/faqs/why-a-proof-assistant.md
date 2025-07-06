@@ -12,5 +12,5 @@ Working in [Rocq](https://rocq-prover.org/) allows us to build on:
 * A rich ecosystem of tactics and meta-programming functionality to combine coarse-grained automated reasoning with fine-grained insights.
 * A [powerful foundation for concurrent separation logic](https://iris-project.org/).
 
-These features enable us to provide a rich program verification environment within a rich environment for formalizing the specification. The combination of these features enables sophitisticated [proving rich properties over whole systems](/content/tech_reports/modular-full-system-verification.md).
+These features enable us to provide a rich program verification environment within a rich environment for formalizing the specification. The combination of these features enables [proving sophisticated properties over whole systems](/content/tech_reports/modular-full-system-verification.md).
 
