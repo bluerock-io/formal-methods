@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>BlueRock Formal Methods - Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation</title>
+        <title>BlueRock Formal Methods</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="/formal-methods/assets/favicon.ico">
         <!-- Bootstrap icons-->
@@ -49,49 +49,8 @@
       <!-- Header-->
       
 <main class="px-5 my-5">
-    <div class="container mt-5">    <div class="container mt-6" style="margin: 30pt;">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation</h3>
-                        
-                        <h5 class="card-subtitle text-body-secondary">
-                          
-                          Hoang-Hai Dang, 
-                          
-                          David Swasey, 
-                          
-                          Gregory Malecha, 
-                          
-                        </h5>
-                        
-                        
-                        <p>January 19, 2024</p>
-                        
-                        <p class="card-text"></p><p>NOVA is a microhypervisor that executes in a privileged kernel mode and that provides only basic services for virtualization, isolation, scheduling and management of physical system resources. NOVA’s design goal is to reduce the critical code base, and to leave richer virtualization features to user applications, such as a Virtual Machine Monitor (VMM), that run in a less privileged mode (e.g. user mode). The size (about 17K lines of code and 15 hypercalls) makes it a suitable target for formal verification.</p>
-<p>In the talk, we present our on-going effort in formally verifying the concurrent NOVA microhypervisor in a modular, tractable approach. We show how to decompose the specifications and proofs of NOVA’s hypercalls using concurrent separation logic, and discuss the (open) challenges.</p>
-<p></p>
-                    </div>
-                    <ul class="list-group list-group-horizontal">
-                      
-                      <li class="list-group-item"><a href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
-                      
-                      
-                      
-                      <li class="list-group-item"><a href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation-slides.pdf" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
-                      
-                      
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-md-2 d-flex align-items-center">
-                <a href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf"><img src="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.png" alt="Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation" class="img-fluid rounded"></a>
-            </div>
-            
-        </div>
-    </div>
+    <div class="container mt-5"><p><a href="https://cacm.acm.org/research/separation-logic/">Separation logic</a> (SL) is a general-purpose logic for reasoning about independence, the principle that underlies all design principles. Rather than being tightly tied to any specific language, separation logic focuses on the way the state can be divided and reasoned about independently. This allows us to use <em>a unified formalism</em> for <a href="../tech_reports/modular-full-system-verification/">reasoning across the spectrum from hardware to hypervisors, processes to systems</a>.
+As a part of this unified formalism, BlueRock aims to expand our verification tools to other languages in the future with separation logic as the foundational logical component. If you've interested in reasoning about a particular programming language, <a href="mailto:contact@bluerock.io">let us know</a>!</p>
 </div>
 </main>
 

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>BlueRock Formal Methods - Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation</title>
+        <title>BlueRock Formal Methods</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="/formal-methods/assets/favicon.ico">
         <!-- Bootstrap icons-->
@@ -49,49 +49,10 @@
       <!-- Header-->
       
 <main class="px-5 my-5">
-    <div class="container mt-5">    <div class="container mt-6" style="margin: 30pt;">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation</h3>
-                        
-                        <h5 class="card-subtitle text-body-secondary">
-                          
-                          Hoang-Hai Dang, 
-                          
-                          David Swasey, 
-                          
-                          Gregory Malecha, 
-                          
-                        </h5>
-                        
-                        
-                        <p>January 19, 2024</p>
-                        
-                        <p class="card-text"></p><p>NOVA is a microhypervisor that executes in a privileged kernel mode and that provides only basic services for virtualization, isolation, scheduling and management of physical system resources. NOVA’s design goal is to reduce the critical code base, and to leave richer virtualization features to user applications, such as a Virtual Machine Monitor (VMM), that run in a less privileged mode (e.g. user mode). The size (about 17K lines of code and 15 hypercalls) makes it a suitable target for formal verification.</p>
-<p>In the talk, we present our on-going effort in formally verifying the concurrent NOVA microhypervisor in a modular, tractable approach. We show how to decompose the specifications and proofs of NOVA’s hypercalls using concurrent separation logic, and discuss the (open) challenges.</p>
-<p></p>
-                    </div>
-                    <ul class="list-group list-group-horizontal">
-                      
-                      <li class="list-group-item"><a href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
-                      
-                      
-                      
-                      <li class="list-group-item"><a href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation-slides.pdf" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
-                      
-                      
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-md-2 d-flex align-items-center">
-                <a href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf"><img src="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.png" alt="Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation" class="img-fluid rounded"></a>
-            </div>
-            
-        </div>
-    </div>
+    <div class="container mt-5"><p>Rust is a modern language with powerful reasoning principles, strong guarantees, and great performance.
+This makes Rust is a great solution to writing better software, but it isn't the full solution to writing <em>provably correct software</em>.
+Rust's type system is focused on eliminating <a href="https://en.wikipedia.org/wiki/Undefined_behavior">undefined behavior</a> (UB), especially UB that comes from concurrent programming idioms that are very difficult to get right. Rust's borrow checker allows it to statically ensure the absence of data races, but, alone, it is not sufficient to prove functional correctness. Take <code>Cell&lt;T&gt;</code> for example, the library guarantees the absence of data races by enforcing that accesses are synchronized (a property which itself must be established in unsafe Rust), but Rust alone provides no facilities for reasoning about the actual value in the cell.</p>
+<p>While Rust <em>alone</em> is not sufficient for verification, there are several tools (e.g. <a href="https://github.com/verus-lang/verus">Verus</a> and <a href="https://model-checking.github.io/kani/">Kani</a>) for verifying properties of Rust code beyond memory safety.</p>
 </div>
 </main>
 
