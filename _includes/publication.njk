@@ -10,7 +10,7 @@ layout: page.njk
                         {% if authors %}
                         <h5 class="card-subtitle text-body-secondary">
                           {% for auth in authors %}
-                          {{ auth }}{% if not forloop.last %}, {% endif %}
+                          {{ auth }}{% if not loop.last %}, {% endif %}
                           {% endfor %}
                         </h5>
                         {% endif %}
