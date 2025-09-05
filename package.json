@@ -4,7 +4,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo 'no tests specified'; exit 1",
+    "format": "prettier --write .",
+    "build": "npx @11ty/eleventy build --pathprefix=formal-methods",
+    "start": "npx @11ty/eleventy --serve --pathprefix=formal-methods",
+    "watch": "npx @11ty/eleventy --serve --watch --pathprefix=formal-methods",
+    "dev": "npx @11ty/eleventy --serve --watch --pathprefix=formal-methods"
   },
   "author": "",
   "license": "ISC",
