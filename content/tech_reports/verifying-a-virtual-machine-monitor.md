@@ -4,7 +4,7 @@ links:
   download: /tech_reports/verifying-a-virtual-machine-monitor.pdf
 thumbnail: /tech_reports/verifying-a-virtual-machine-monitor.png
 short: >
-    Proving correctness BlueRock's VMM modularly with separation logic.
+    Proving correctness of BlueRock's VMM modularly with separation logic.
 date: 2024-10-07
 authors:
 - Paolo G. Giarrusso
