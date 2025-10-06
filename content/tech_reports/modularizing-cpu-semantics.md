@@ -5,7 +5,7 @@ thumbnail: /tech_reports/modularizing-cpu-semantics.png
 links:
   download: /tech_reports/modularizing-cpu-semantics.pdf
   conference: https://popl24.sigplan.org/home/prisc-2024#About
-  slides: /tech_reports/modularizing-cpu-semantics-slides.pdf
+  slides: /talks/prisc24-modularizing-cpu-semantics.pdf
 short: >
    An overview of our work on hardware architectural semantics to support modular reasoning principles.
 date: 2024-01-20

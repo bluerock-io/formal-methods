@@ -5,7 +5,7 @@ thumbnail: /tech_reports/towards-modular-specification-and-verification-of-concu
 links:
   download: /tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf
   conference: https://popl24.sigplan.org/home/prisc-2024#About
-  slides: /tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation-slides.pdf
+  slides: /talks/prisc24-towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf
 short: >
    An overview of our work on verifying the NOVA microkernel circa 2024.
 date: 2024-01-20

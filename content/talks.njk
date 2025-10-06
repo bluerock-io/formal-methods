@@ -1,0 +1,53 @@
+---
+layout: page.njk
+title: Talks
+permalink: /talks/
+talks:
+  - title: Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation
+    where: PriSC'24
+    date: 2024-01-20
+    slides: /talks/prisc24-towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf
+    report: content/tech_reports/towards-modular-specification.md
+---
+
+{% import 'card.njk' as card %}
+
+<h2>Talks</h2>
+
+{% for item in talks %}
+
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-8 align-middle">
+        <div class="card-body">
+          <h3 class="card-title">{{ item.title }}</h3>
+          {% if item.authors %}
+          <h5 class="card-subtitle text-body-secondary">
+            {% for auth in item.authors %}
+            {{ auth }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </h5>
+          {% endif %}
+          {% if item.date %}
+          <p>{{ item.date | formatDate }}</p>
+          {% endif %}
+          {% if item.where %}
+          <p>{{ item.where }}</p>
+          {% endif %}
+          <p class="card-text">{{ item.short | safe }}</p>
+        </div>
+    </div>
+  </div>
+  <ul class="list-group list-group-horizontal">
+    {% if item.slides %}
+    <li class="list-group-item"><a href="{{ item.slides }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
+    {% endif %}
+    {% if item.report %}
+    <li class="list-group-item"><a href="{{ item.report | inputPathToUrl }}" class="btn btn-primary">Report <i class="bi bi-book"></i></a></li>
+    {% endif %}
+    {% if item.code %}
+    <li class="list-group-item"><a href="{{ item.code | url }}" class="btn btn-primary">Code <i class="bi bi-code"></i></a></li>
+    {% endif %}
+  </ul>
+</div>
+{% endfor %}
