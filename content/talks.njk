@@ -4,6 +4,51 @@ title: Talks
 permalink: /talks/
 talks:
 
+- title: Formal Methods @ BlueRock
+  where: DARPA Resilient Software Systems Colloquium
+  speaker: Gregory Malecha
+  date: 2025-06-17
+  slides: /talks/darpa-resilience-2025-FM4Certification.pdf
+  report: content/tech_reports/darpa-resilient-systems-colloquium.md
+  video: https://www.youtube.com/watch?v=ppz570c7Dck
+  elsewhere:
+    - "Big Specification: Specification, Proof, and Testing at Scale (BSPW01), Isaac Newton Institute, October 2024"
+    - NIST Workshop on Formal Methods within Certification Programs (FMCP), July 2024
+    - ETH Zurich, Switzerland, June 2024
+    - Horizon Maths (Fondation Sciences mathématiques de Paris), March 2024
+    - Vistas in Verified Software (VS2W01), Isaac Newton Institute, July 2022
+    - Formal Methods for the Informal Engineer (FMIE), 2021
+    - High Confidence Software and Systems (HCSS), September 2020
+    - Iris Workshop, Aarhus University, Denmark, October 2019
+    - New England Systems Verification Day (NESVD), October 2019
+
+- title: Modular, Full-System Verification
+  where: Workshop on Hot Topics in Operating Systems (HotOS) 2025, Banff, Canada
+  speaker: Gregory Malecha
+  date: 2025-05-14
+  slides: /talks/hotos-2025-modular-fullstack.pdf
+  report: content/tech_reports/modular-full-system-verification.md
+
+- title: A Formal Specification of the NOVA Microhypervisor
+  where: FOSDEM 2025, Brussels, Belgium
+  speaker: Hai Dang
+  date: 2025-02-01
+  slides: /talks/fosdem-2025-nova.pdf
+  report: content/tech_reports/a-formal-specification-of-the-NOVA-microhypervisors-abi.md
+  video: https://archive.fosdem.org/2025/schedule/event/fosdem-2025-5083-a-formal-specification-of-the-nova-microhypervisor/
+  short: >
+    We present a formal specification of NOVA that captures its complex concurrent
+    and architectural behavior. Our specification combines an operational
+    specification for unprivileged user code with a separation logic specification
+    of privileged state and operations. The specification precisely captures
+    the subtle behaviors of NOVA such as address translation and user faults.
+    Separation logic’s small footprint and open world nature makes the specification
+    highly modular and reasonably high level, allowing us to abstract
+    architectural details that are encapsulated by NOVA and evolve the
+    formal specification as NOVA evolves.
+    Using the specification, we have carried out proofs of the NOVA source code
+    as well as of applications running on top of NOVA.
+
 - title: A Lightweight Framework for Decomposing Logical Atomicity of LTS Composition
   where: Iris Workshop 2024, ETH Zurich, Switzerland
   speaker: Hai Dang
@@ -33,6 +78,17 @@ talks:
   date: 2024-01-20
   slides: /talks/prisc24-towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf
   report: content/tech_reports/towards-modular-specification.md
+  elsewhere:
+    - New England Systems Verification Day (NESVD), April 26, 2024
+  short: >
+    Operating systems provide an interesting challenge for specification
+    because they require low level specifications that talk directly about system resources.
+    In this talk, we present our specification of the NOVA microhypervisor,
+    a modern, concurrent microkernel with virtualization extensions.
+    Our specification approach connects an operational semantics of user mode code
+    with a handler describing the effects of privileged operations using separation logic.
+    In addition to proving some functions within the NOVA implementation,
+    we have also verified a large amount of user code against this specification.
 
 - title: Modularizing CPU semantics for Virtualization
   where: Workshop on Principles of Secure Compilation (PriSC) 2024, London, UK

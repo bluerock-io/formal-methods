@@ -1,9 +1,10 @@
 ---
 title: BlueRock @ DARPA Resilient Systems
-where: DARPA Resilient Systems Colloquium
+where: DARPA Resilient Software Systems Colloquium
 links:
   download: /tech_reports/bluerock-rsc.pdf
   publisher: https://creative.spa.com/darpa/i2o/resilient-software-systems-colloquium/index.php?p=welcome
+  slides: /talks/darpa-resilience-2025-FM4Certification.pdf
 thumbnail: /tech_reports/bluerock-rsc.png
 short: >
     BlueRock showcases its formal methods work at the Resilient Systems Colloquium.

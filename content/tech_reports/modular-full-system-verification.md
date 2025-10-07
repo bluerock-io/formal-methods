@@ -5,6 +5,7 @@ thumbnail: /tech_reports/modular-full-system-verification.png
 links:
   download: /tech_reports/modular-full-system-verification.pdf
   publisher: https://dl.acm.org/doi/10.1145/3713082.3730387
+  slides: /talks/hotos-2025-modular-fullstack.pdf
 short: >
     Learn how BlueRock is verifying entire systems using the power of separation logic.
 year: 2025
