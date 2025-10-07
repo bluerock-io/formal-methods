@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Modular, Full-System Verification - BlueRock Formal Methods</title>
+        <title>Protocol Completion of A Robust C++ Virtual Switch - BlueRock Formal Methods</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="/formal-methods/assets/favicon.ico">
         <!-- Bootstrap icons-->
@@ -60,39 +60,43 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title">Modular, Full-System Verification</h3>
+                        <h3 class="card-title">Protocol Completion of A Robust C++ Virtual Switch</h3>
                         
                         <h5 class="card-subtitle text-body-secondary">
                           
-                          Gregory Malecha, 
+                          Jasper Haag, 
                           
-                          Hoang-Hai Dang, 
-                          
-                          Paolo G. Giarrusso, 
+                          Yoichi Hirai, 
                           
                           Simon Hudon, 
                           
-                          Jan-Oliver Kaiser, 
+                          Awais Masood, 
                           
-                          David Swasey
+                          Gregory Malecha, 
+                          
+                          Gordon Stewart
                           
                         </h5>
                         
                         
-                        <p>May 14, 2025</p>
+                        <p>September 29, 2024</p>
                         
-                        <p class="card-text"></p><p>We present an approach to specifying operating systems that is both highly modular and supports deriving various properties necessary to modern operating systems. The approach combines a machine semantics decomposed by privilege levels with a separation logic specification of the operating system API. We describe how the specification style enables natural proofs of robust safety in addition to deep behavioral refinements of user-mode applications running atop the OS. This approach enables simple and flexible concurrent specifications and unlocks new opportunities for whole-system verification.</p>
+                        <p class="card-text"></p><p>This technical report presents <strong>protocol completion</strong>, a new solution to
+<em>robust safety</em> over shared-memory protocols such as <em>VIRTIO</em>.
+Protocol completion provides a generic specification for an application that
+implements a protocol with clients that might not always follow the protocol.
+Unlike approaches to robust safety that duplicate proofs, protocol completion
+lets one prove a system only once, deriving functional and safety guarantees
+independently on top against both compliant and adversarial clients.
+As evaluation, we apply protocol completion to verification of the dataplane of
+a virtual Ethernet switch running on BlueRock's microkernel-based operating system.</p>
 <p></p>
                     </div>
                     <ul class="list-group list-group-horizontal">
                       
-                      <li class="list-group-item"><a href="/formal-methods/tech_reports/modular-full-system-verification.pdf" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
+                      <li class="list-group-item"><a href="/formal-methods/tech_reports/protocol-completion-of-a-robust-cpp-virtual-switch.pdf" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
                       
                       
-                      <li class="list-group-item"><a href="https://dl.acm.org/doi/10.1145/3713082.3730387" class="btn btn-primary">Publisher <i class="bi bi-book"></i></a></li>
-                      
-                      
-                      <li class="list-group-item"><a href="/formal-methods/talks/hotos-2025-modular-fullstack.pdf" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
                       
                       
                     </ul>
@@ -100,7 +104,7 @@
             </div>
             
             <div class="col-md-2 d-flex align-items-center">
-                <a href="/formal-methods/tech_reports/modular-full-system-verification.pdf"><img src="/formal-methods/tech_reports/modular-full-system-verification.png" alt="Modular, Full-System Verification" class="img-fluid rounded"></a>
+                <a href="/formal-methods/tech_reports/protocol-completion-of-a-robust-cpp-virtual-switch.pdf"><img src="/formal-methods/tech_reports/protocol-completion-of-a-robust-cpp-virtual-switch.png" alt="Protocol Completion of A Robust C++ Virtual Switch" class="img-fluid rounded"></a>
             </div>
             
         </div>

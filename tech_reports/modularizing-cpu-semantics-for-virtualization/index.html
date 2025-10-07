@@ -28,22 +28,28 @@
     <body style="padding-top: 49pt;">
       <!-- Responsive navbar-->
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="height: 49pt">
-    <div class="container">
-        <a class="navbar-brand" href="/formal-methods/"><img src="/formal-methods/assets/bluerock.svg" style="max-height: 30pt;" alt="BlueRock Formal Methods"><span class="h3 align-middle"> / Formal Methods</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-            
-                <li class="nav-item"><a class="nav-link" href="/formal-methods/">Home</a></li>
-            
-                <li class="nav-item"><a class="nav-link" href="/formal-methods/faq/">FAQ</a></li>
-            
-                <li class="nav-item"><a class="nav-link" href="/formal-methods/tech_reports/">Tech Reports</a></li>
-            
+  <div class="container">
+    <a class="navbar-brand" href="/formal-methods/"><img src="/formal-methods/assets/bluerock.svg" style="max-height: 30pt;" alt="BlueRock Formal Methods"><span class="h3 align-middle"> / Formal Methods</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+      <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/formal-methods/">Home</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/formal-methods/tech_reports/">Tech Reports</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/formal-methods/talks/">Talks</a>
+        </li>
+      
 
-            </ul>
-        </div>
+      </ul>
     </div>
+  </div>
 </nav>
 
       <!-- Header-->
@@ -71,7 +77,7 @@
                         </h5>
                         
                         
-                        <p>January 19, 2024</p>
+                        <p>January 20, 2024</p>
                         
                         <p class="card-text"></p><p>Hardware-assisted virtualization simplifies <em>implementing</em> virtual machine monitors (VMM), but verifying a VMM using hardware virtualization requires a precise model of the virtualization. A natural specification for a VMM is that it refines the bare-metal hardware <em>specification</em>; however, a simple backwards simulation on the processor semantics would require case distinction on all instructions, showing that they refine the non-virtualized counterparts. This case analysis is prohibitively expensive for modern architectures. Further, correctness of hardware virtualization is mainly the responsibility of the ISA architects, not the VMM implementer. In this paper, we propose a modularization of hardware semantics that succinctly captures the difference between the &quot;bare-metal&quot; behavior and hardware-virtualized behavior of a processor. We illustrate how this helped us modularize the verification of our VMM.</p>
 <p></p>
@@ -82,7 +88,7 @@
                       
                       
                       
-                      <li class="list-group-item"><a href="/formal-methods/tech_reports/modularizing-cpu-semantics-slides.pdf" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
+                      <li class="list-group-item"><a href="/formal-methods/talks/prisc24-modularizing-cpu-semantics.pdf" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
                       
                       
                     </ul>

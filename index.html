@@ -28,79 +28,83 @@
     <body style="padding-top: 49pt;">
       <!-- Responsive navbar-->
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="height: 49pt">
-    <div class="container">
-        <a class="navbar-brand" href="/formal-methods/"><img src="/formal-methods/assets/bluerock.svg" style="max-height: 30pt;" alt="BlueRock Formal Methods"><span class="h3 align-middle"> / Formal Methods</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-            
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/formal-methods/">Home</a></li>
-            
-                <li class="nav-item"><a class="nav-link" href="/formal-methods/faq/">FAQ</a></li>
-            
-                <li class="nav-item"><a class="nav-link" href="/formal-methods/tech_reports/">Tech Reports</a></li>
-            
+  <div class="container">
+    <a class="navbar-brand" href="/formal-methods/"><img src="/formal-methods/assets/bluerock.svg" style="max-height: 30pt;" alt="BlueRock Formal Methods"><span class="h3 align-middle"> / Formal Methods</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+      <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
+      
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/formal-methods/">Home</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/formal-methods/tech_reports/">Tech Reports</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/formal-methods/talks/">Talks</a>
+        </li>
+      
 
-            </ul>
-        </div>
+      </ul>
     </div>
+  </div>
 </nav>
 
       <!-- Header-->
       
 
 <header class="bg-light py-5">
-  <div class="container">
-    <div class="row gx-5 justify-content-center">
-      <div class="col-lg-1 col-sm-0"></div>
-
-      <div class="col-lg-6">
-        <div class="my-5 text-center">
+<div class="container">
+  <div class="row gx-5 justify-content-center">
+    
+    <div class="col-lg-9">
+      <div class="my-6 text-center">
           <h1 class="display-8 fw-bolder mb-2">Formal Guarantees about <i>Real</i> Software</h1>
           <p class="lead text-dark-50 mb-4">
-            Use BlueRock tools to verify your software.
+            Achieving highest confidence on the BlueRock's virtualization stack.
           </p>
-          <div class="d-grid d-sm-flex justify-content-center">
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="mailto:contact@bluerock.io">Tell me more! <i class="bi bi-chevron-double-right"></i></a>
-          </div>
+          
+          <img src="/formal-methods/assets/nova-safe-spec.svg" style="max-height: 160pt;" alt="The BlueRock's virtualization stack">
         </div>
       </div>
-    </div>
   </div>
+</div>
 </header>
 
 <section id="mission">
-    <div class="container my-5">
-    <h1>Verifying Software @ BlueRock</h1>
-    <p>
-        At <a href="https://bluerock.io/">BlueRock Security</a>, we are on a mission to secure systems from the ground up.
-        Formal verification is a crucial part of this goal because it is the only way to provide mathematical guarantees about a system.
-        To enable reasoning about software, we are developing state-of-the-art tools to prove that software behaves as intended <i>in all possible situations</i>.
-        Our tools build on decades of research into <i>modular</i> reasoning principles for highly concurrent software.
-    </p>
-    <p>
-        To date, we have applied these tools to verify (parts of) complex, concurrent C++ code across the BlueRock ULTRA&trade; stack from the <a href="https://hypervisor.org/">NOVA microhypervisor</a> to user-mode applications, including a console multiplexer and a Virtual Machine Monitor (VMM).
-        These verifications have been <a href="/formal-methods/tech_reports/developing-with-formal-methods-at-bedrock-systems/">collaborative efforts</a> between systems engineers with no background in formal methods and formal methods engineers, and the experiences have been beneficial on both sides.
-        Our verification efforts have found and fixed many subtle bugs ranging from shallow undefined behavior to race conditions and semantic bugs across the entire stack.
-    </p>
-    <p>
-        While we continue our work hardening the BlueRock stack, fully realizing our mission has lead us to enable the broader use of our verification tools outside BlueRock.
-        This work includes polishing our tools to improve usability and developing specifications for common C++ infrastructure such as the C++ standard library.
-
-        </p><div class="d-grid d-sm-flex justify-content-sm-center">
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="mailto:contact@bluerock.io">I'm interested!</a>
-        </div>
-    <p></p>
+<div class="container my-5">
+  <h1>Verifying the BlueRock ULTRA&trade; Virtualization Stack</h1>
+  <p> At <a href="https://bluerock.io/">BlueRock Security</a>, we are on a mission to secure systems from the ground up.
+      Formal verification is a crucial part of this goal because it is the only way to provide mathematical guarantees about a system.
+      We apply decades of research on <i>modular</i> reasoning principles for highly concurrent software,
+      in order to prove that our virtualization stack behaves as intended <i>in all possible situations</i>.
+      
+  </p>
+  <p>
+      To date, we have specified and verified major parts of complex, concurrent C++ code across the
+      <a href="/formal-methods/tech_reports/bluerock-darpa-resilient-systems/">BlueRock ULTRA&trade; stack</a>,
+      from the <a href="/formal-methods/tech_reports/a-formal-specification-of-the-nova-microhypervisor-abi/">NOVA</a> <a href="https://hypervisor.org/">microhypervisor</a> to user-mode applications,
+      including a console multiplexer (UMX),
+      a <a href="/formal-methods/tech_reports/verifying-a-virtual-machine-monitor/">Virtual Machine Monitor</a> (VMM),
+      and a <a href="/formal-methods/tech_reports/protocol-completion-of-a-robust-c-virtual-switch/"> virtual Ethernet switch</a>.
+      These verifications have been <a href="/formal-methods/tech_reports/developing-with-formal-methods-at-bedrock-systems/">collaborative efforts</a>
+      between systems engineers with no background in formal methods and formal methods engineers,
+      and the experiences have been beneficial on both sides.
+      Our verification efforts have found and fixed many subtle bugs,
+      ranging from shallow undefined behavior to race conditions and semantic bugs across the entire stack.
+  </p>
+  
 </div>
 </section>
 
 <section id="features">
-  <div class="container">
+<div class="container">
 
-  <h2>Read more</h2>
+  <h2>Technical Reports</h2>
   <div class="row mx-1">
-      
-
+    
       <div class="card col-lg-6 mb-6 mb-lg-0 p-2">
         <div class="row">
           <div class="col-md-8">
@@ -111,12 +115,11 @@
               <p class="card-text">BlueRock showcases its formal methods work at the Resilient Systems Colloquium.
 </p>
               
-              <p class="card-text"><small class="text-body-secondary">June 16, 2025</small></p>
+              <p class="card-text"><small class="text-body-secondary">June 17, 2025</small></p>
               
               <a class="text-decoration-none" href="/formal-methods/tech_reports/bluerock-darpa-resilient-systems/">
                 Read it!<i class="bi bi-arrow-right"></i>
               </a>
-
             </div>
           </div>
         
@@ -126,8 +129,7 @@
         
         </div>
       </div>
-      
-
+    
       <div class="card col-lg-6 mb-6 mb-lg-0 p-2">
         <div class="row">
           <div class="col-md-8">
@@ -138,12 +140,11 @@
               <p class="card-text">Learn how BlueRock is verifying entire systems using the power of separation logic.
 </p>
               
-              <p class="card-text"><small class="text-body-secondary">May 13, 2025</small></p>
+              <p class="card-text"><small class="text-body-secondary">May 14, 2025</small></p>
               
               <a class="text-decoration-none" href="/formal-methods/tech_reports/modular-full-system-verification/">
                 Read it!<i class="bi bi-arrow-right"></i>
               </a>
-
             </div>
           </div>
         
@@ -153,70 +154,63 @@
         
         </div>
       </div>
-      
-
+    
       <div class="card col-lg-6 mb-6 mb-lg-0 p-2">
         <div class="row">
           <div class="col-md-8">
             <div class="card-body">
               <h3 class="card-title">
-                <a class="text-decoration-none h3" href="/formal-methods/tech_reports/a-formal-specification-of-the-nova-microhypervisor-abi/">A Formal Specification of the NOVA Microhypervisor ABI</a>
+                <a class="text-decoration-none h3" href="/formal-methods/tech_reports/verifying-a-virtual-machine-monitor/">Verifying a Virtual Machine Monitor</a>
               </h3>
-              <p class="card-text">BlueRock Security developed a separation logic specification of the NOVA microhypervisor ABI that...</p>
-              
-              <p class="card-text"><small class="text-body-secondary">January 31, 2024</small></p>
-              
-              <a class="text-decoration-none" href="/formal-methods/tech_reports/a-formal-specification-of-the-nova-microhypervisor-abi/">
-                Read it!<i class="bi bi-arrow-right"></i>
-              </a>
-
-            </div>
-          </div>
-        
-          <div class="col-md-4">
-            <a href="/formal-methods/tech_reports/a-formal-specification-of-the-nova-microhypervisor-abi/"><img src="/formal-methods/tech_reports/nova-interface.png" class="align-middle img-fluid rounded-end" alt=""></a>
-          </div>
-        
-        </div>
-      </div>
-      
-
-      <div class="card col-lg-6 mb-6 mb-lg-0 p-2">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="card-body">
-              <h3 class="card-title">
-                <a class="text-decoration-none h3" href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation/">Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation</a>
-              </h3>
-              <p class="card-text">An overview of our work on verifying the NOVA microkernel circa 2024.
+              <p class="card-text">Proving correctness of BlueRock&#39;s VMM modularly with separation logic.
 </p>
               
-              <p class="card-text"><small class="text-body-secondary">January 19, 2024</small></p>
+              <p class="card-text"><small class="text-body-secondary">October 7, 2024</small></p>
               
-              <a class="text-decoration-none" href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation/">
+              <a class="text-decoration-none" href="/formal-methods/tech_reports/verifying-a-virtual-machine-monitor/">
                 Read it!<i class="bi bi-arrow-right"></i>
               </a>
-
             </div>
           </div>
         
           <div class="col-md-4">
-            <a href="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation/"><img src="/formal-methods/tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.png" class="align-middle img-fluid rounded-end" alt=""></a>
+            <a href="/formal-methods/tech_reports/verifying-a-virtual-machine-monitor/"><img src="/formal-methods/tech_reports/verifying-a-virtual-machine-monitor.png" class="align-middle img-fluid rounded-end" alt=""></a>
           </div>
         
         </div>
       </div>
-      
+    
+      <div class="card col-lg-6 mb-6 mb-lg-0 p-2">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title">
+                <a class="text-decoration-none h3" href="/formal-methods/tech_reports/protocol-completion-of-a-robust-c-virtual-switch/">Protocol Completion of A Robust C++ Virtual Switch</a>
+              </h3>
+              <p class="card-text">Proving robust safety of BlueRock&#39;s VIRTIO-based virtual Ethernet switch.
+</p>
+              
+              <p class="card-text"><small class="text-body-secondary">September 29, 2024</small></p>
+              
+              <a class="text-decoration-none" href="/formal-methods/tech_reports/protocol-completion-of-a-robust-c-virtual-switch/">
+                Read it!<i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <a href="/formal-methods/tech_reports/protocol-completion-of-a-robust-c-virtual-switch/"><img src="/formal-methods/tech_reports/protocol-completion-of-a-robust-cpp-virtual-switch.png" class="align-middle img-fluid rounded-end" alt=""></a>
+          </div>
+        
+        </div>
+      </div>
+    
   </div>
-
 
   <div class="d-grid d-sm-flex justify-content-sm-center pt-3">
-
-    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/formal-methods/tech_reports/">Read More <i class="bi bi-arrow-right"></i>
- </a>
+    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="/formal-methods/tech_reports/">Read More <i class="bi bi-arrow-right"></i></a>
   </div>
-
-  </div>
+</div>
 </section>
 
 
