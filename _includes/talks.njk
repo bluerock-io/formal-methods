@@ -1,0 +1,53 @@
+{% import 'card.njk' as card %}
+
+<h2>Talks</h2>
+
+{% for item in talks %}
+
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="align-middle">
+        <div class="card-body">
+          <h3 class="card-title">{{ item.title }}</h3>
+          {% if item.speaker %}
+          <h5 class="card-subtitle text-body-secondary">
+            {{ item.speaker }}
+          </h5>
+          {% endif %}
+          {% if item.date or item.where %}
+          <p>{{ item.date | formatDate }} {% if item.where %} | {{ item.where }} {% endif %}</p>
+          {% endif %}
+          {% if item.elsewhere %}
+          <div class="card-text">Also given at:
+            <ul>
+              {% for loc in item.elsewhere %}
+              <li>{{ loc }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          {% if item.short %}
+          <details>
+            <summary>Abstract</summary>
+            <p class="card-text">{{ item.short | safe }}</p>
+          </details>
+          {% endif %}
+        </div>
+    </div>
+  </div>
+  <ul class="list-group list-group-horizontal">
+    {% if item.slides %}
+    <li class="list-group-item"><a href="{{ item.slides }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
+    {% endif %}
+    {% if item.report %}
+    <li class="list-group-item"><a href="{{ item.report | inputPathToUrl }}" class="btn btn-primary">Report <i class="bi bi-book"></i></a></li>
+    {% endif %}
+    {% if item.video %}
+    <li class="list-group-item"><a href="{{ item.video }}" class="btn btn-primary">Video <i class="bi bi-film"></i></a></li>
+    {% endif %}
+    {% if item.code %}
+    <li class="list-group-item"><a href="{{ item.code | url }}" class="btn btn-primary">Code <i class="bi bi-code"></i></a></li>
+    {% endif %}
+  </ul>
+</div>
+{% endfor %}

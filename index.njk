@@ -5,56 +5,72 @@ permalink: /
 {% import 'card.njk' as card %}
 
 <header class="bg-light py-5">
-  <div class="container">
-    <div class="row gx-5 justify-content-center">
-      <div class="col-lg-1 col-sm-0"></div>
-{#            <div class="col-lg-3 col-sm-4">
-             <svg width="222" height="245" viewBox="0 0 222 245" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M160.212 26.8406L110.41 52.9303L60.6094 26.8406L110.41 0.750977L160.212 26.8406Z" fill="#006BFF"/>
-<path d="M110.41 163.27L60.6094 138.831V89.19L110.41 62.6566L160.407 88.977V138.512L110.41 163.27Z" fill="#006BFF"/>
-<path d="M52.9779 134.872L0 108.215V56.7987L51.1676 30.8688L101.874 58.041L53.0134 83.7402V134.872H52.9779Z" fill="#006BFF"/>
-<path d="M168.163 83.7402L119.302 58.041L170.009 30.8688L221.176 56.7987V108.215L168.198 134.855V83.7225L168.163 83.7402Z" fill="#006BFF"/>
-<path d="M0 117.143V188.703L110.499 245L221.159 189.164V117.143L110.57 172.996L0 117.143Z" fill="#006BFF"/>
-</svg>
-            </div>
-#}
-      <div class="col-lg-6">
-        <div class="my-5 text-center">
+<div class="container">
+  <div class="row gx-5 justify-content-center">
+    {#
+    <div class="col-lg-1 col-sm-0"></div>
+    <div class="col-lg-3 col-sm-4">
+      <svg width="222" height="245" viewBox="0 0 222 245" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M160.212 26.8406L110.41 52.9303L60.6094 26.8406L110.41 0.750977L160.212 26.8406Z" fill="#006BFF"/>
+      <path d="M110.41 163.27L60.6094 138.831V89.19L110.41 62.6566L160.407 88.977V138.512L110.41 163.27Z" fill="#006BFF"/>
+      <path d="M52.9779 134.872L0 108.215V56.7987L51.1676 30.8688L101.874 58.041L53.0134 83.7402V134.872H52.9779Z" fill="#006BFF"/>
+      <path d="M168.163 83.7402L119.302 58.041L170.009 30.8688L221.176 56.7987V108.215L168.198 134.855V83.7225L168.163 83.7402Z" fill="#006BFF"/>
+      <path d="M0 117.143V188.703L110.499 245L221.159 189.164V117.143L110.57 172.996L0 117.143Z" fill="#006BFF"/>
+      </svg>
+    </div>
+    #}
+    <div class="col-lg-9">
+      <div class="my-6 text-center">
           <h1 class="display-8 fw-bolder mb-2">Formal Guarantees about <i>Real</i> Software</h1>
           <p class="lead text-dark-50 mb-4">
-            Use BlueRock tools to verify your software.
+            Achieving highest confidence on the BlueRock's virtualization stack.
           </p>
+          {#
           <div class="d-grid d-sm-flex justify-content-center">
             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="mailto:contact@bluerock.io">Tell me more! <i class="bi bi-chevron-double-right"></i></a>
           </div>
+          #}
+          <img src="/assets/nova-safe-spec.svg" style="max-height: 160pt;" alt="The BlueRock's virtualization stack"/>
         </div>
       </div>
-    </div>
   </div>
+</div>
 </header>
 
 <section id="mission">
-    <div class="container my-5">
-    <h1>Verifying Software @ BlueRock</h1>
-    <p>
-        At <a href="https://bluerock.io/">BlueRock Security</a>, we are on a mission to secure systems from the ground up.
-        Formal verification is a crucial part of this goal because it is the only way to provide mathematical guarantees about a system.
-        To enable reasoning about software, we are developing state-of-the-art tools to prove that software behaves as intended <i>in all possible situations</i>.
-        Our tools build on decades of research into <i>modular</i> reasoning principles for highly concurrent software.
-    </p>
-    <p>
-        To date, we have applied these tools to verify (parts of) complex, concurrent C++ code across the BlueRock ULTRA&trade; stack from the <a href="https://hypervisor.org/">NOVA microhypervisor</a> to user-mode applications, including a console multiplexer and a Virtual Machine Monitor (VMM).
-        These verifications have been <a href="{{ "content/tech_reports/developing-with-formal-methods.md" | inputPathToUrl }}">collaborative efforts</a> between systems engineers with no background in formal methods and formal methods engineers, and the experiences have been beneficial on both sides.
-        Our verification efforts have found and fixed many subtle bugs ranging from shallow undefined behavior to race conditions and semantic bugs across the entire stack.
-    </p>
-    <p>
-        While we continue our work hardening the BlueRock stack, fully realizing our mission has lead us to enable the broader use of our verification tools outside BlueRock.
-        This work includes polishing our tools to improve usability and developing specifications for common C++ infrastructure such as the C++ standard library.
+<div class="container my-5">
+  <h1>Verifying the BlueRock ULTRA&trade; Virtualization Stack</h1>
+  <p> At <a href="https://bluerock.io/">BlueRock Security</a>, we are on a mission to secure systems from the ground up.
+      Formal verification is a crucial part of this goal because it is the only way to provide mathematical guarantees about a system.
+      We apply decades of research on <i>modular</i> reasoning principles for highly concurrent software,
+      in order to prove that our virtualization stack behaves as intended <i>in all possible situations</i>.
+      {#
+      To enable reasoning about software, we are developing state-of-the-art tools to prove that software behaves as intended <i>in all possible situations</i>.
+      Our tools build on decades of research into <i>modular</i> reasoning principles for highly concurrent software.
+      #}
+  </p>
+  <p>
+      To date, we have specified and verified major parts of complex, concurrent C++ code across the
+      <a href="{{ "content/tech_reports/darpa-resilient-systems-colloquium.md" | inputPathToUrl }}">BlueRock ULTRA&trade; stack</a>,
+      from the <a href="{{ "content/tech_reports/a-formal-specification-of-the-NOVA-microhypervisors-abi.md" | inputPathToUrl }}">NOVA</a> <a href="https://hypervisor.org/">microhypervisor</a> to user-mode applications,
+      including a console multiplexer (UMX),
+      a <a href="{{ "content/tech_reports/verifying-a-virtual-machine-monitor.md" | inputPathToUrl }}">Virtual Machine Monitor</a> (VMM),
+      and a <a href="{{ "content/tech_reports/protocol-completion-of-a-robust-cpp-virtual-switch.md" | inputPathToUrl }}"> virtual Ethernet switch</a>.
+      These verifications have been <a href="{{ "content/tech_reports/developing-with-formal-methods.md" | inputPathToUrl }}">collaborative efforts</a>
+      between systems engineers with no background in formal methods and formal methods engineers,
+      and the experiences have been beneficial on both sides.
+      Our verification efforts have found and fixed many subtle bugs,
+      ranging from shallow undefined behavior to race conditions and semantic bugs across the entire stack.
+  </p>
+  {#
+  <p> While we continue our work hardening the BlueRock stack, fully realizing our mission has lead us to enable the broader use of our verification tools outside BlueRock.
+      This work includes polishing our tools to improve usability and developing specifications for common C++ infrastructure such as the C++ standard library.
 
-        <div class="d-grid d-sm-flex justify-content-sm-center">
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="mailto:contact@bluerock.io">I'm interested!</a>
-        </div>
-    </p>
+      <div class="d-grid d-sm-flex justify-content-sm-center">
+          <a class="btn btn-primary btn-lg px-4 me-sm-3" href="mailto:contact@bluerock.io">I'm interested!</a>
+      </div>
+  </p>
+  #}
 </div>
 </section>
 

@@ -8,6 +8,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets/favicon.ico");
 
     eleventyConfig.addPassthroughCopy("tech_reports/");
+    eleventyConfig.addPassthroughCopy("talks/");
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 

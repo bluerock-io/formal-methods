@@ -1,18 +1,20 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="height: 49pt">
-    <div class="container">
-        <a class="navbar-brand" href="/"><img src="/assets/bluerock.svg" style="max-height: 30pt;" alt="{{ siteName }}"/><span class="h3 align-middle"> / Formal Methods</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-            {% for name, url in [["Home", "/"],["FAQ","/faq/"],["Tech Reports", "/tech_reports/"]] %}
-                <li class="nav-item"><a class="nav-link{% if url == page.url %} active" aria-current="page"{% else %}"{% endif %} href="{{ url }}">{{ name }}</a></li>
-            {% endfor %}
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/assets/bluerock.svg" style="max-height: 30pt;" alt="{{ siteName }}"/><span class="h3 align-middle"> / Formal Methods</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+      <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
+      {% for name, url in [["Home", "/"],["Tech Reports", "/tech_reports/"], ["Talks", "/talks/"]] %}
+        <li class="nav-item">
+          <a class="nav-link{% if url == page.url %} active" aria-current="page"{% else %}"{% endif %} href="{{ url }}">{{ name }}</a>
+        </li>
+      {% endfor %}
 {#
-                <li class="nav-item">
-                   <a class="btn btn-primary" href="mailto:contact@bluerock.io"><i class="bi bi-envelope-fill"></i></a>
-                </li>
+        <li class="nav-item">
+            <a class="btn btn-primary" href="mailto:contact@bluerock.io"><i class="bi bi-envelope-fill"></i></a>
+        </li>
 #}
-            </ul>
-        </div>
+      </ul>
     </div>
+  </div>
 </nav>
