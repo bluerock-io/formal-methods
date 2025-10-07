@@ -4,55 +4,40 @@ title: Talks
 permalink: /talks/
 talks:
 - title: Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation
-  where: PriSC'24
+  where: Workshop on Principles of Secure Compilation (PriSC) 2024, London, UK
   date: 2024-01-20
   slides: /talks/prisc24-towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf
   report: content/tech_reports/towards-modular-specification.md
 - title: Modularizing CPU semantics for Virtualization
-  where: PriSC'24
+  where: Workshop on Principles of Secure Compilation (PriSC) 2024, London, UK
   date: 2024-01-20
   slides: /talks/prisc24-modularizing-cpu-semantics.pdf
   report: content/tech_reports/modularizing-cpu-semantics.md
+- title: More hidden states, more modalities, and generalized invariants and ghost ownership
+  where: Iris Workshop 2022, Radboud University Nijmegen, The Netherlands
+  date: 2022-05-02
+  slides: /talks/iris-2022-tls.pdf
+  short: >
+    Local states are commonly used to maintain agreement within a component and isolation across components.
+    A language level thread can has its own thread-local storage;
+    a hypervisor maintains separate address spaces (virtual address translations) for its virtual machines;
+    a processor has multiple-level caches that are local to a CPU core or a group of CPU cores.
+    Reasoning about local states needs to make sure that (1) within a component,
+    the local state is ambient, i.e. it is always readily available,
+    but is unobtrusive to the reasoning and (2) across components,
+    local states should be isolated, but can also be used in cross-component
+    communications in a safe and secure way.
+    Iris provides an abstraction called "monotone predicates" (monPred)
+    to account for local states in form of "BI indices", which was inspired
+    by several weak memory developments in Iris.
+    At BedRock Systems, we aim to handle, within a single logic,
+    different types of local states at different levels of abstraction.
+    This means that we also need to handle the composition, the interaction,
+    and/or the abstraction between different types of local states.
+    To that end, we develop "monotone lenses" to support the interaction
+    between types of local states, and generalize monPred with monotone lenses,
+    resulting in multiple local-state "modalities" inspired by the weak memory works.
+    Furthermore, we push for the generalization of Iris invariants and ghost ownership for monPred with lenses.
 ---
 
-{% import 'card.njk' as card %}
-
-<h2>Talks</h2>
-
-{% for item in talks %}
-
-<div class="card mb-3">
-  <div class="row no-gutters">
-    <div class="col-md-8 align-middle">
-        <div class="card-body">
-          <h3 class="card-title">{{ item.title }}</h3>
-          {% if item.authors %}
-          <h5 class="card-subtitle text-body-secondary">
-            {% for auth in item.authors %}
-            {{ auth }}{% if not loop.last %}, {% endif %}
-            {% endfor %}
-          </h5>
-          {% endif %}
-          {% if item.date %}
-          <p>{{ item.date | formatDate }}</p>
-          {% endif %}
-          {% if item.where %}
-          <p>{{ item.where }}</p>
-          {% endif %}
-          <p class="card-text">{{ item.short | safe }}</p>
-        </div>
-    </div>
-  </div>
-  <ul class="list-group list-group-horizontal">
-    {% if item.slides %}
-    <li class="list-group-item"><a href="{{ item.slides }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
-    {% endif %}
-    {% if item.report %}
-    <li class="list-group-item"><a href="{{ item.report | inputPathToUrl }}" class="btn btn-primary">Report <i class="bi bi-book"></i></a></li>
-    {% endif %}
-    {% if item.code %}
-    <li class="list-group-item"><a href="{{ item.code | url }}" class="btn btn-primary">Code <i class="bi bi-code"></i></a></li>
-    {% endif %}
-  </ul>
-</div>
-{% endfor %}
+{% include 'talks.njk' %}
