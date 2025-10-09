@@ -5,7 +5,7 @@ links:
 thumbnail: /tech_reports/protocol-completion-of-a-robust-cpp-virtual-switch.png
 short: >
     Proving robust safety of BlueRock's VIRTIO-based virtual Ethernet switch.
-date: 2024-09-29
+date: 2024-08-01
 authors:
 - Jasper Haag
 - Yoichi Hirai
