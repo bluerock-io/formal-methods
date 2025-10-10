@@ -59,52 +59,52 @@
       <!-- Header-->
       
 <main class="px-5 my-5">
-    <div class="container mt-5">    <div class="container mt-6" style="margin: 30pt;">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Modularizing CPU semantics for Virtualization</h3>
-                        
-                        <h5 class="card-subtitle text-body-secondary">
-                          
-                          Paolo G. Giarrusso, 
-                          
-                          Abhishek Anand, 
-                          
-                          Gregory Malecha, 
-                          
-                          František Farka, 
-                          
-                          Hoang-Hai Dang
-                          
-                        </h5>
-                        
-                        
-                        <p>January 20, 2024</p>
-                        
-                        <p class="card-text"></p><p>Hardware-assisted virtualization simplifies <em>implementing</em> virtual machine monitors (VMM), but verifying a VMM using hardware virtualization requires a precise model of the virtualization. A natural specification for a VMM is that it refines the bare-metal hardware <em>specification</em>; however, a simple backwards simulation on the processor semantics would require case distinction on all instructions, showing that they refine the non-virtualized counterparts. This case analysis is prohibitively expensive for modern architectures. Further, correctness of hardware virtualization is mainly the responsibility of the ISA architects, not the VMM implementer. In this paper, we propose a modularization of hardware semantics that succinctly captures the difference between the &quot;bare-metal&quot; behavior and hardware-virtualized behavior of a processor. We illustrate how this helped us modularize the verification of our VMM.</p>
+    <div class="container mt-5"><div class="container mt-6" style="margin: 30pt;">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Modularizing CPU semantics for Virtualization</h3>
+            
+            <h5 class="card-subtitle text-body-secondary">
+              
+              Paolo G. Giarrusso, 
+              
+              Abhishek Anand, 
+              
+              Gregory Malecha, 
+              
+              František Farka, 
+              
+              Hoang-Hai Dang
+              
+            </h5>
+            
+            
+            <p>January 20, 2024  | Workshop on Principles of Secure Compilation (PriSC) 2024, London, UK </p>
+            
+            <p class="card-text"></p><p>Hardware-assisted virtualization simplifies <em>implementing</em> virtual machine monitors (VMM), but verifying a VMM using hardware virtualization requires a precise model of the virtualization. A natural specification for a VMM is that it refines the bare-metal hardware <em>specification</em>; however, a simple backwards simulation on the processor semantics would require case distinction on all instructions, showing that they refine the non-virtualized counterparts. This case analysis is prohibitively expensive for modern architectures. Further, correctness of hardware virtualization is mainly the responsibility of the ISA architects, not the VMM implementer. In this paper, we propose a modularization of hardware semantics that succinctly captures the difference between the &quot;bare-metal&quot; behavior and hardware-virtualized behavior of a processor. We illustrate how this helped us modularize the verification of our VMM.</p>
 <p></p>
-                    </div>
-                    <ul class="list-group list-group-horizontal">
-                      
-                      <li class="list-group-item"><a href="/formal-methods/tech_reports/modularizing-cpu-semantics.pdf" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
-                      
-                      
-                      
-                      <li class="list-group-item"><a href="/formal-methods/talks/prisc24-modularizing-cpu-semantics.pdf" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
-                      
-                      
-                    </ul>
-                </div>
-            </div>
+          </div>
+          <ul class="list-group list-group-horizontal">
             
-            <div class="col-md-2 d-flex align-items-center">
-                <a href="/formal-methods/tech_reports/modularizing-cpu-semantics.pdf"><img src="/formal-methods/tech_reports/modularizing-cpu-semantics.png" alt="Modularizing CPU semantics for Virtualization" class="img-fluid rounded"></a>
-            </div>
+            <li class="list-group-item"><a href="/formal-methods/tech_reports/modularizing-cpu-semantics.pdf" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
             
-        </div>
+            
+            
+            <li class="list-group-item"><a href="/formal-methods/talks/prisc24-modularizing-cpu-semantics.pdf" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
+            
+            
+          </ul>
+      </div>
     </div>
+    
+    <div class="col-md-2 d-flex align-items-center">
+      <a href="/formal-methods/tech_reports/modularizing-cpu-semantics.pdf"><img src="/formal-methods/tech_reports/modularizing-cpu-semantics.png" alt="Modularizing CPU semantics for Virtualization" class="img-fluid rounded"></a>
+    </div>
+    
+  </div>
+</div>
 </div>
 </main>
 
