@@ -1,6 +1,6 @@
 ---
 title: Modularizing CPU semantics for Virtualization
-where: PriSC'24
+where: Workshop on Principles of Secure Compilation (PriSC) 2024, London, UK
 thumbnail: /tech_reports/modularizing-cpu-semantics.png
 links:
   download: /tech_reports/modularizing-cpu-semantics.pdf

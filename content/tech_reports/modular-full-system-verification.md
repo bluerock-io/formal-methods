@@ -1,6 +1,6 @@
 ---
 title: Modular, Full-System Verification
-where: HotOS'25
+where: Workshop on Hot Topics in Operating Systems (HotOS) 2025, Banff, Canada
 thumbnail: /tech_reports/modular-full-system-verification.png
 links:
   download: /tech_reports/modular-full-system-verification.pdf

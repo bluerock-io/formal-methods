@@ -19,6 +19,9 @@ permalink: /tech_reports/
           {% else %}
           <h3 class="card-title">{{ item.data.title | safe }}</h3>
           {% endif %}
+          {% if item.data.date %}
+          <p>{{ item.data.date | formatDate }} {% if item.data.where %} | {{ item.data.where }} {% endif %}</p>
+          {% endif %}
           <p class="card-text">{{ item.data.short }}</p>
         <a class="text-decoration-none" href="{{ item.url }}">
           Read it!<i class="bi bi-arrow-right"></i>

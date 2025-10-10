@@ -1,44 +1,44 @@
 ---
 layout: page.njk
 ---
-    <div class="container mt-6" style="margin: 30pt;">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">{{ title }}</h3>
-                        {% if authors %}
-                        <h5 class="card-subtitle text-body-secondary">
-                          {% for auth in authors %}
-                          {{ auth }}{% if not loop.last %}, {% endif %}
-                          {% endfor %}
-                        </h5>
-                        {% endif %}
-                        {% if date %}
-                        <p>{{ date | formatDate }}</p>
-                        {% endif %}
-                        <p class="card-text">{{ content | safe }}</p>
-                    </div>
-                    <ul class="list-group list-group-horizontal">
-                      {% if links.download %}
-                      <li class="list-group-item"><a href="{{ links.download }}" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
-                      {% endif %}
-                      {% if links.publisher %}
-                      <li class="list-group-item"><a href="{{ links.publisher }}" class="btn btn-primary">Publisher <i class="bi bi-book"></i></a></li>
-                      {% endif %}
-                      {% if links.slides %}
-                      <li class="list-group-item"><a href="{{ links.slides }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
-                      {% endif %}
-                      {% if links.code %}
-                      <li class="list-group-item"><a href="{{ links.code | url }}" class="btn btn-primary">Code <i class="bi bi-code"></i></a></li>
-                      {% endif %}
-                    </ul>
-                </div>
-            </div>
-            {% if thumbnail %}
-            <div class="col-md-2 d-flex align-items-center">
-                <a href="{{ links.download }}"><img src="{{ thumbnail }}" alt="{{ title }}" class="img-fluid rounded" /></a>
-            </div>
+<div class="container mt-6" style="margin: 30pt;">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">{{ title }}</h3>
+            {% if authors %}
+            <h5 class="card-subtitle text-body-secondary">
+              {% for auth in authors %}
+              {{ auth }}{% if not loop.last %}, {% endif %}
+              {% endfor %}
+            </h5>
             {% endif %}
-        </div>
+            {% if date %}
+            <p>{{ date | formatDate }} {% if where %} | {{ where }} {% endif %}</p>
+            {% endif %}
+            <p class="card-text">{{ content | safe }}</p>
+          </div>
+          <ul class="list-group list-group-horizontal">
+            {% if links.download %}
+            <li class="list-group-item"><a href="{{ links.download }}" class="btn btn-primary">Download <i class="bi bi-download"></i></a></li>
+            {% endif %}
+            {% if links.publisher %}
+            <li class="list-group-item"><a href="{{ links.publisher }}" class="btn btn-primary">Publisher <i class="bi bi-book"></i></a></li>
+            {% endif %}
+            {% if links.slides %}
+            <li class="list-group-item"><a href="{{ links.slides }}" class="btn btn-primary">Slides <i class="bi bi-file-earmark-slides-fill"></i></a></li>
+            {% endif %}
+            {% if links.code %}
+            <li class="list-group-item"><a href="{{ links.code | url }}" class="btn btn-primary">Code <i class="bi bi-code"></i></a></li>
+            {% endif %}
+          </ul>
+      </div>
     </div>
+    {% if thumbnail %}
+    <div class="col-md-2 d-flex align-items-center">
+      <a href="{{ links.download }}"><img src="{{ thumbnail }}" alt="{{ title }}" class="img-fluid rounded" /></a>
+    </div>
+    {% endif %}
+  </div>
+</div>

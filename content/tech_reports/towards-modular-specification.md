@@ -1,6 +1,6 @@
 ---
 title: Towards Modular Specification and Verification of Concurrent Hypervisor-based Isolation
-where: PriSC'24
+where: Workshop on Principles of Secure Compilation (PriSC) 2024, London, UK
 thumbnail: /tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.png
 links:
   download: /tech_reports/towards-modular-specification-and-verification-of-concurrent-hypervisor-based-isolation.pdf
