@@ -12,7 +12,7 @@ date: 2022-06-01
 authors:
 - Gregory Malecha
 - Gordon Stewart
-- Frantisek Farka
+- František Farka
 - Jasper Haag
 - Yoichi Hirai
 ---
