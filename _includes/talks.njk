@@ -45,6 +45,9 @@
     {% if item.video %}
     <li class="list-group-item"><a href="{{ item.video }}" class="btn btn-primary">Video <i class="bi bi-film"></i></a></li>
     {% endif %}
+    {% if item.event %}
+    <li class="list-group-item"><a href="{{ item.event }}" class="btn btn-primary">Event <i class="bi bi-people"></i></a></li>
+    {% endif %}
     {% if item.code %}
     <li class="list-group-item"><a href="{{ item.code | url }}" class="btn btn-primary">Code <i class="bi bi-code"></i></a></li>
     {% endif %}
